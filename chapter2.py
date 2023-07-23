@@ -55,3 +55,58 @@ def swap_referece(list, offset_d, offset_e):
     list[offset_d] = list[offset_e]
     list[offset_e] = temp
 print(a)
+
+d = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
+print(d[:-15])
+
+print('It\’s OK. "See you" #')
+
+
+title = "TEAMLAB X Inflearn"
+
+print(title.upper())
+print(title.lower())
+print(title.split(" "))
+
+print(title.count("a")) # title 변수에 'a'가 몇 개 있는지 개수 반환
+print(title.upper().count("a")) # title 변수를 대문자로 만든 후, 'a'가 몇 개 있는지 개수 반환
+
+print(title.isdigit()) # title 변수의 문자열이 숫자인지 여부 반환
+print(title.title())
+print(title.startswith("a")) # title 변수가 'a' 로 시작하는지 여부 반환
+
+title_2 ="12345"
+
+print(title_2.isdigit())
+
+print(title.find("Gachon"))
+
+print(title.upper().find("Gachon"))
+
+print("    Hello    ".strip())
+
+print("A-B-C-D-E-F".split("-"))
+
+
+# lab counting
+f = open("asap_lyrics.txt", 'r')
+asap_lyric = ""
+while 1:
+	line = f.readline()
+	if not line:
+		break
+	asap_lyric = asap_lyric + line.strip() + "\n"
+f.close()
+
+n_of_tik = asap_lyric.lower().count("tik")
+print("Number of a Word 'tik'", n_of_tik)
+
+
+def test(t):
+	t = 20 # 사라짐
+	print("In function :", t)
+
+x = 10
+print("Before :", x) # 10
+test(x) # 함수 호출
+print("After :", x) # 10 - 함수 내부의 t는 새로운 주소값을 가짐
